@@ -1,0 +1,23 @@
+#!/bin/bash
+
+JJS=/usr/bin/jrunscript
+LIBO_DIR=/usr/lib/libreoffice
+URE_DIR=/usr/lib/ure
+
+ODS_PATH=$1
+
+echo "######## dump ########"
+
+CLASSPATH=$LIBO_DIR/program/classes/unoil.jar
+CLASSPATH=$CLASSPATH:$URE_DIR/share/java/juh.jar
+CLASSPATH=$CLASSPATH:$URE_DIR/share/java/jurt.jar
+CLASSPATH=$CLASSPATH:$URE_DIR/share/java/ridl.jar
+CLASSPATH=$CLASSPATH:$URE_DIR/lib/jpipe.so
+
+$JJS -encoding utf-8 -classpath "$CLASSPATH" -f dump_ods.js $ODS_PATH
+
+echo "######## import ########"
+
+CLASSPATH=mysql-connector-java-5.1.34.jar
+
+$JJS -encoding utf-8 -classpath "$CLASSPATH" -f import.js $ODS_PATH
