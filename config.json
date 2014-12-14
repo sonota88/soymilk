@@ -1,0 +1,7 @@
+{
+    "rdbms": "mysql"
+    ,"url": "jdbc:mysql://localhost:3306/sample"
+    ,"user": "{user}"
+    ,"password": "{password}"
+}
+
