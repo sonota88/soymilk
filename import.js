@@ -202,7 +202,7 @@ function loadConfig(){
   return eval("(" + json + ")");
 }
 
-var odsFullPath = "" + arguments[0];
+var odsFullPath = String(arguments[0]);
 var config = loadConfig();
 
 withConnection(
