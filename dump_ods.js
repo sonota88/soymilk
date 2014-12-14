@@ -105,7 +105,7 @@ var TableSheet = (function(){
 
     var ci = this.offset.col;
     while(true){
-      var pname = this.get(riFrom + 1, ci);
+      var pname = this.get(riFrom + 2, ci);
 
       if(isBlank(pname)){
         break;
