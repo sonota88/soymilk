@@ -225,7 +225,7 @@ function main(path){
 
       var sheets = doc.getSheets();
 
-      sheets.forEach(function(sh, i){
+      _ma(sheets).each(function(sh, i){
         var tableSheet = new TableSheet(sh);
         print("sheet=" + sh.name);
         print(" / table=" + tableSheet.getTablePName()
