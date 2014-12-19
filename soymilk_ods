@@ -19,5 +19,6 @@ $JJS -encoding utf-8 -classpath "$CLASSPATH" -f dump_ods.js $ODS_PATH
 echo "######## import ########"
 
 CLASSPATH=mysql-connector-java-5.1.34.jar
+# CLASSPATH=sqlite-jdbc-3.x.jar.jar
 
 $JJS -encoding utf-8 -classpath "$CLASSPATH" -f import.js $ODS_PATH

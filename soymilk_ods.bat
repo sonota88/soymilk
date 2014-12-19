@@ -18,6 +18,7 @@ set ODS_FULLPATH=%1
 echo ######## import ########
 
 set CLASSPATH=mysql-connector-java-5.1.33.jar
+rem set CLASSPATH=sqlite-jdbc-3.x.jar
 
 %JJS% -encoding utf8 -classpath "%CLASSPATH%" -f import.js "%ODS_FULLPATH%"
 

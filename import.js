@@ -32,6 +32,8 @@ function squote(str){
 function getConnection(rdbms, url, prop){
   if(rdbms === 'mysql'){
     return Packages.com.mysql.jdbc.Driver().connect(url, prop);
+  }else if(rdbms === 'sqlite'){
+    return java.sql.DriverManager.getConnection(url);
   }else{
     throw new Error("not yet implmented");
   }
